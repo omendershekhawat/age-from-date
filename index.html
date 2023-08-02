@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get age</title>
+</head>
+<body>
+    <div id="wrapper">
+    <input type="date">
+    <button> get Age</button>
+    <p></p>
+</div>
+<script>
+const btn = document.querySelector("button")
+const inp = document.querySelector("input")
+btn.onclick =() => {
+    document.querySelector("p").innerHTML=""
+    const today = new Date( );
+    const userInput =new Date (inp.value );
+
+
+const todayDate=today.getDate()
+const todayMonth=today.getMonth()
+const todayYear=today.getFullYear()
+
+const userDate=userInput.getDate()
+const userMonth=userInput.getMonth()
+const userYear=userInput.getFullYear()
+
+const diffence = {
+    date:todayDate-userDate,
+    month:todayMonth-userMonth,
+    year:todayYear-userYear
+}
+console.log(diffence)
+document.querySelector("p").innerHTML="you are"+diffence.year+" year, "+diffence.month+"month and " + diffence.date +"days old."
+};
+
+
+
+
+
+</script>
+
+
+
+
+        
+   
+   
+    
+</body>
+</html>
